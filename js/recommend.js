@@ -44,7 +44,7 @@ window.SITE_RECOMMEND = [
   ["ミックス・プロダクション", 5, "Idioteque", "Radiohead", "電子音の配置を聴く"],
 
   ["演奏・楽器の音", 2, "Hotel California", "Eagles", "ギターの掛け合いが有名"],
-  ["演奏・楽器の音", 3, "RIDE ON TIME", "山下達郎", "バンドの一体感を聴く"],
+  ["演奏・楽器の音", 3, "Katachi", "トクマルシューゴ", "自然な演奏が心地よい"],
   ["演奏・楽器の音", 4, "Take Five", "Dave Brubeck Quartet", "5拍子の演奏を味わう"],
   ["演奏・楽器の音", 5, "Cantaloupe Island", "Herbie Hancock", "演奏の会話を聴く"],
 
