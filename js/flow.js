@@ -125,7 +125,7 @@
       '<section class="band band--light" id="dislikes"><div class="wrap">' + heading('band__title', c.copy.dislikeTitle) + '<p class="band__lead">' + esc(c.copy.dislikeLead) + '</p>' + dis + ex + '</div></section>' +
       '<section class="band" id="ask"><div class="wrap">' + heading('band__title', c.copy.askTitle) + '<p class="band__lead">' + esc(c.copy.askLead) + '</p><div class="split split--ask"><ul class="asks">' + asks + '</ul><aside class="side" id="askPanel" aria-live="polite"></aside></div></div></section>' +
       (S.config.survey && S.config.survey.enabled === false ? '' : '<section class="band band--cta" id="join"><div class="wrap">' + heading('band__title', c.copy.surveyCtaTitle) + '<p class="band__lead">' + esc(c.copy.surveyCtaLead) + '</p><button class="btn btn--main btn--big" type="button" data-survey-open>' + esc(c.copy.surveyBtn) + '</button></div></section>') +
-      '<footer class="foot"><div class="wrap"><p>' + esc(c.copy.footerNote) + '</p><p>表示中のデータ: ' + esc(src) + '(' + s.n + '人)' + upd + '</p>' + lookupNote() + '<div class="foot__idle">' + S.dataToggleHTML() + S.idle.toggleHTML() + '</div></div></footer>';
+      '<footer class="foot"><div class="wrap"><p>' + esc(c.copy.footerNote) + '</p>' + lookupNote() + '<div class="foot__idle">' + S.dataToggleHTML() + S.idle.toggleHTML() + '</div></div></footer>';
 
     root.classList.toggle('flow--again', again);
     var corr = S.ui.corrChart(), fc = $('#flowCorr', root); fc.appendChild(corr.children[0]); fc.appendChild(corr.children[0]);
