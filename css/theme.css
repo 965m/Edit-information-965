@@ -1,0 +1,41 @@
+/* ==========================================================
+   theme.css : 色とフォントはここだけで変えられます
+   - 基本の色は :root の変数
+   - 別パレットは data-palette で切り替え(js/config.js の palette)
+   - 円グラフの色は --c1 〜 --c8 (js/content.js の color: 1〜8 が対応)
+   ========================================================== */
+:root {
+  --ink: #16141c;        /* 暗い面・線・文字 */
+  --paper: #efeee9;      /* 明るい面 */
+  --paper-2: #e0ded7;    /* 明るい面の濃いほう */
+  --grey: #cfcdd2;       /* 切り抜きの時に色が抜ける部分 */
+  --accent: #9d8cff;     /* 主役の差し色 */
+
+  --c1: #9d8cff;
+  --c2: #ff5a45;
+  --c3: #c5f24a;
+  --c4: #ff9bd2;
+  --c5: #5fd8ea;
+  --c6: #ffd23f;
+  --c7: #ff9a3d;
+  --c8: #8ff0b8;
+  --c9: #7a95ff;
+  --c10: #d9a3ff;
+
+  --font-display: "Dela Gothic One", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+  --font-body: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+
+  --radius: 24px;
+  --line: 3px;           /* 枠線の太さ */
+  --ease: cubic-bezier(.2, .8, .2, 1);
+}
+
+:root[data-palette="sorbet"] {
+  --ink: #2b2140; --paper: #fff6ec; --paper-2: #f3e6d6; --grey: #e4dbe8; --accent: #ff7ab6;
+  --c1: #ff7ab6; --c2: #ffb347; --c3: #7fe0b5; --c4: #8ab6ff; --c5: #c9a6ff; --c6: #ffe066; --c7: #ff8a65; --c8: #6fd3e6; --c9: #7aa2ff; --c10: #e0a9f0;
+}
+
+:root[data-palette="night"] {
+  --ink: #0d0f14; --paper: #e8e6df; --paper-2: #cfcdc5; --grey: #5a5f6e; --accent: #7cf0d0;
+  --c1: #7cf0d0; --c2: #ff6b8a; --c3: #ffd166; --c4: #8ea2ff; --c5: #c792ea; --c6: #f78c6c; --c7: #89ddff; --c8: #b5e86a; --c9: #6aa0ff; --c10: #ff9edb;
+}
