@@ -82,7 +82,8 @@
   var groupMap = {};
   function gkey(t) { return String(t || '').normalize('NFKC').toLowerCase().replace(/[\s　]+/g, ''); }
   function aliasOf(t) {
-    var al = S.content.dislikeAliases || {};
+    var al = S.content.dislikeAliases || {}, pats = S.content.dislikePatterns || [], tt = String(t || '').normalize('NFKC');
+    for (var i = 0; i < pats.length; i++) { if (new RegExp(pats[i][0], 'i').test(tt)) return pats[i][1]; }
     return groupMap[gkey(t)] || al[t] || al[String(t).normalize('NFKC')] || t;
   }
   S.groupOf = aliasOf;
@@ -146,7 +147,7 @@
       if (!get('element')) return;
       out.push({
         name: get('name'), comment: get('comment'), elementText: get('element'), subTexts: splitComma(get('subElements')),
-        dislikeTexts: splitList(get('dislike')), dislikeExample: get('dislikeExample'),
+        dislikeTexts: splitList(get('dislike')).filter(function (t) { return !NONE.test(t); }), dislikeExample: get('dislikeExample'),
         level: levelOf(get('time'), get('frequency')), time: get('time'), frequency: get('frequency'),
         repeat: get('repeat'), instrumental: get('instrumental'), discover: get('discover'),
         genres: splitList(get('genres')), artists: splitStrict(get('artists')), songs: splitList(get('songs')),
